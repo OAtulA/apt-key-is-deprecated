@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Block Example</title>
+    <style>
+        .code-block {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .copy-button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="code-block">
+        <pre>
+            <code>
+&lt;header&gt;
+    &lt;p class="h2"&gt;
+        apt-key is deprecated. &lt;br&gt;
+        Manage keyring files in trusted.gpg.d instead
+    &lt;/p&gt;
+&lt;/header&gt;
+            </code>
+        </pre>
+    </div>
+    <button class="copy-button" onclick="copyCode()">Copy Code</button>
+
+    <script>
+        function copyCode() {
+            var codeBlock = document.querySelector('.code-block');
+            var code = codeBlock.querySelector('code');
+
+            var range = document.createRange();
+            range.selectNode(code);
+
+            var selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            document.execCommand('copy');
+            alert('Code copied!');
+        }
+    </script>
+</body>
+</html>

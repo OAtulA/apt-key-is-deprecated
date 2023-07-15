@@ -1,0 +1,47 @@
+p.h2 {
+    color: rgb(236, 123, 170);
+    font-size: 2.4rem;
+
+    text-align: center;
+}
+
+.tool {
+    margin: 5rem 20vw 4rem 20vw;
+}
+
+.submit {
+    background-color: rgb(32, 206, 32);
+    margin-top: 1.2rem;
+}
+
+.message {
+    /*
+    display: none; */
+    margin-top: 5rem;
+
+}
+
+.code-block {
+    border: solid 2px red;
+    text-align: left;
+}
+
+code {
+    /* width: 60vw;*/
+    width: fit-content;
+
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    color: lightgreen;
+
+    background-color: rgb(70, 62, 62);
+
+}
+
+.copy-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

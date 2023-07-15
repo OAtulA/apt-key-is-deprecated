@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gpg apt-key depreceated</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <p class="h2">
+        apt-key is deprecated. <br>
+        Manage keyring files in trusted.gpg.d instead
+        </p>
+    </header>
+
+
+    <div class="tool">
+
+        <form class="apt-key-deperecated">
+            <label> Enter teh name of the software </label><br>
+            <input type="text" name="name"> <br>            
+           <label > Enter the url and the branch given</label> <br>
+           <input type="text" name="url" id="url">
+           <br>
+           <button class="submit" onclick="showCommand(event)">Submit</button>
+
+
+
+        </form>
+        <div class="message">
+            Now paste this in your terminal <br>
+            <button class="copy-button" onclick="copyCode()">Copy Code</button> <br>
+            <div class="code-block">
+                
+                    <code>
+                        
+                    </code>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
