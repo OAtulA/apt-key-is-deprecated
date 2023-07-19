@@ -34,6 +34,8 @@ form>input{
 .code-block {
     border: solid 2px red;
     text-align: left;
+
+    background-color: rgb(70, 62, 62);
 }
 
 code {
@@ -47,7 +49,7 @@ code {
     word-wrap: break-word;
     color: lightgreen;
 
-    background-color: rgb(70, 62, 62);
+    
 
 }
 
