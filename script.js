@@ -1,5 +1,7 @@
 let showCommand = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault(); 
+    // Prevent the default form submission behavior 
+    //which is refreshing the page
 
     console.log("show command is working.");
 
@@ -28,9 +30,9 @@ let writecode = () => {
     let inputURL = document.querySelector("#url").value;
     
     // The output text
-    let lines = `curl -sS <span class="math-inline">\{inputURL\} \| gpg \-\-dearmor \| sudo tee /usr/share/keyrings/</span>{softwareName}.gpg
+    let lines = `curl -sS <span class="math-inline">${inputURL} | gpg --dearmor |sudo tee /usr/share/keyrings/${softwareName}.gpg
     
-    deb [signed-by=/usr/share/keyrings/${softwareName}.gpg] <span class="math-inline">\{inputURL\}  \| sudo tee /etc/apt/sources\.list\.d/</span>{softwareName}.list`;
+    deb [signed-by=/usr/share/keyrings/${softwareName}.gpg] <span class="math-inline">${inputURL}  |sudo tee /etc/apt/sources.list.d/${softwareName}.list`;
     
     //to write to code
     codeBlock.innerHTML = lines;
