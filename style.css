@@ -9,6 +9,15 @@ p.h2 {
     margin: 5rem 20vw 4rem 20vw;
 }
 
+form>label{
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+form>input{
+    margin-top: 0.7rem ;
+    margin-bottom: 0.7rem;
+}
 .submit {
     background-color: rgb(32, 206, 32);
     margin-top: 1.2rem;
@@ -17,6 +26,7 @@ p.h2 {
 .message {
     /*
     display: none; */
+    visibility: hidden;
     margin-top: 5rem;
 
 }

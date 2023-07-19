@@ -15,25 +15,27 @@ let showCommand = (event) => {
 
 let writecode = () => {
     console.log("writecode is working");
-
+    
+    // Initialize the codeBlock variable
     let codeBlock = document.querySelector("div.code-block>pre>code");
-
+    
     // Now making the text
-
+    
     // Getting the software name
     let softwareName = document.querySelector('input[name="name"]').value;
-
+    
     // Getting the URL
     let inputURL = document.querySelector("#url").value;
-
+    
     // The output text
-    let lines = `curl -sS ${inputURL} | gpg --dearmor | sudo tee /usr/share/keyrings/${softwareName}.gpg
-
-    deb [signed-by=/usr/share/keyrings/${softwareName}.gpg] ${inputURL}  | sudo tee /etc/apt/sources.list.d/${softwareName}.list`;
-
+    let lines = `curl -sS <span class="math-inline">\{inputURL\} \| gpg \-\-dearmor \| sudo tee /usr/share/keyrings/</span>{softwareName}.gpg
+    
+    deb [signed-by=/usr/share/keyrings/${softwareName}.gpg] <span class="math-inline">\{inputURL\}  \| sudo tee /etc/apt/sources\.list\.d/</span>{softwareName}.list`;
+    
     //to write to code
     codeBlock.innerHTML = lines;
-};
+    
+    };
 
 function copyCode() {
     var codeBlock = document.querySelector('.code-block');
