@@ -3,7 +3,7 @@ let showCommand = (event) => {
     // Prevent the default form submission behavior 
     //which is refreshing the page
 
-    console.log("show command is working.");
+    //console.log("show command is working.");
 
     // Write the correct code
     writecode();
@@ -16,7 +16,7 @@ let showCommand = (event) => {
 };
 
 let writecode = () => {
-    console.log("writecode is working");
+    //console.log("writecode is working");
     
     // Initialize the codeBlock variable
     let codeBlock = document.querySelector("div.code-block>code");
