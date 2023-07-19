@@ -19,7 +19,7 @@ let writecode = () => {
     console.log("writecode is working");
     
     // Initialize the codeBlock variable
-    let codeBlock = document.querySelector("div.code-block>pre>code");
+    let codeBlock = document.querySelector("div.code-block>code");
     
     // Now making the text
     
@@ -50,7 +50,7 @@ function copyCode() {
     selection.removeAllRanges();
     selection.addRange(range);
 
-    // let copytext = code.innerText;
+    let copytext = code.innerText;
 
     navigator.clipboard.writeText(copytext)
         .then(() => {
